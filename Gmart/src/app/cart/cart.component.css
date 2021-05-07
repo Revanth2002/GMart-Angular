@@ -1,0 +1,29 @@
+body{
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.section-pagetop{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+.img-cart{
+    width: 60%;
+    height: 60%;
+}
+
+input[type='text']{
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none; 
+}
+
+@media screen and (max-width : 800px) {
+    .img-cart{
+        width: 100px;
+        height: 80px;
+    }
+}

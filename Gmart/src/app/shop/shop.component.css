@@ -226,12 +226,31 @@
     .img-item:nth-child(1){
         margin-left: 110px;
     } 
+    
+  #promo-img{
+    width: 50%;
+    height: 600px;
+  }
 }
 
 @media screen and (max-width:480px) {
     #bottom-img{
         margin-left: -114px;
     }
+        
+#promo-img{
+    width: 50%;
+    height: 450px;
 }
+}
+
+#promo-img{
+    width: 50%;
+    height: 640px;
+}
+
+
+
+
 
 

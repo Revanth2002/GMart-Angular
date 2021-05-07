@@ -1,23 +1,23 @@
 <section>
-    <div class="carousel">
-        <div id="car" class="carousel slide" data-ride="carousel">
+    <div class="carousel "  >
+        <div id="car" class="carousel slide" data-ride="carousel" >
             
             <!-- Carousel Images -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
+            <div class="carousel-inner" >
+              <div class="carousel-item "  *ngFor="let i of carousel ;let index = index;let isFirst = first" [ngClass]="{active:isFirst}">
                 <div class="carousel-caption">
-                    <h4 >Stay Home and Shop Safe</h4>
-                    <a href="#" class="btn" class="content" data-bs-toggle="tooltip" data-bs-placement="top" title="Buy Now" > &nbsp;&nbsp; Buy Now &nbsp;&nbsp;</a>
+                    <h4 >{{i.caption}}</h4>
+                    <a routerLink="shop" class="btn" class="content" data-bs-toggle="tooltip" data-bs-placement="top" title="Buy Now" > &nbsp;&nbsp; Buy Now &nbsp;&nbsp;</a>
                  </div>
-                <img src="https://images.unsplash.com/photo-1487215078519-e21cc028cb29?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="Los Angeles" width="1100" height="500">
+                <img src={{i.img}} alt="Los Angeles" width="1100" height="500">
               </div>
-              <div class="carousel-item">
+              <!-- <div class="carousel-item">
                 <div class="carousel-caption">
                     <h4 >Get 40% off on Mobiles</h4>
                     <a href="#" class="btn" class="content" data-bs-toggle="tooltip" data-bs-placement="top" title="Buy Now"> &nbsp;&nbsp; Buy Now &nbsp;&nbsp;</a>
                  </div>
                 <img src="https://images.unsplash.com/photo-1611734828917-718f25babb2b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="Chicago" width="1100" height="500">
-              </div>
+              </div> -->
             </div>
             
             <!-- Carousel controls -->
@@ -61,19 +61,19 @@
                         <div class="top-offer" id="slick-disp"> 
                             <div class="prod-1">
                                 <h3>Mobiles</h3>
-                                <img src="media/mobile.png" alt="img">
+                                <img src="assets/mobile.png" alt="img">
                             </div>
                             <div class="prod-2">
                                 <h3>AC</h3>
-                                <img src="media/ac.png" alt="img">
+                                <img src="assets/ac.png" alt="img">
                             </div>
                             <div class="prod-3">
                                 <h3>Fan</h3>
-                                <img src="media/fan.png" alt="img">
+                                <img src="assets/fan.png" alt="img">
                             </div>
                             <div class="prod-4">
                                 <h3>Refrigerator</h3>
-                                <img src="media/fridge.png" alt="img">
+                                <img src="assets/fridge.png" alt="img">
                             </div>
                         </div>
                     </div>
@@ -83,8 +83,8 @@
         <!--Promotions-->
         <section id="promotions">
             <div class="row" style="width: 100%; margin: 0px;"> 
-                <img class="img-fluid" src="https://i.pinimg.com/originals/cd/90/88/cd908869314450ba95aa517c6dd42e86.jpg" alt="Promotions"  style=" height: 400px; width: 50%;" >
-                <img class="img-fluid" src="https://i.pinimg.com/564x/ec/c6/46/ecc6464f94ce9bede936af60d87e3da5.jpg" alt="Promotions"  style=" height: 400px; width: 50%; " >
+                <img class="img-fluid" src="https://i.pinimg.com/originals/cd/90/88/cd908869314450ba95aa517c6dd42e86.jpg" alt="Promotions"  id="promo-img">
+                <img class="img-fluid" src="https://i.pinimg.com/564x/ec/c6/46/ecc6464f94ce9bede936af60d87e3da5.jpg" alt="Promotions"   id="promo-img">
             </div>
         </section>
 </section>

@@ -7,12 +7,12 @@ body{
 /*Carousel*/
 .carousel-inner img {
     width: 100%;
-    height: 650px;
+    height: 900px;
   }
 
   .carousel-caption h4{
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-      
+      margin-bottom : 40px
   }
   
 
@@ -106,11 +106,20 @@ body{
 }
 
 .content{
-    padding: 15px;
+    padding: 13px;
     font-size: 18px;
-    background: #ceb3ad;
-    margin-bottom: 15px;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: white;
+
 }
+
+.content:hover{
+    border: 1px solid white;
+    color: black;
+    background-color: white;
+}
+
 .content.bg-alt{
     background: #cddadb;
 }
@@ -120,6 +129,16 @@ body{
     .carousel-inner img {
         height: 550px;
       }
+}
+
+/*Promotions*/
+#promotions{
+    width: 100%;
+}
+
+#promo-img{
+    width: 50%;
+    height: 640px;
 }
 
 @media screen and (max-width : 700px) {
@@ -140,6 +159,11 @@ body{
         object-fit: contain ;
     
     }
+
+  #promo-img{
+    width: 50%;
+    height: 600px;
+  }
 }
 
 @media screen and (max-width : 450px) {
@@ -157,6 +181,11 @@ body{
         object-fit: contain ;
     
     }
+    
+#promo-img{
+    width: 50%;
+    height: 450px;
+}
 }
 
 

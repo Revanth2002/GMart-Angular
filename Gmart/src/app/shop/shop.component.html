@@ -1,25 +1,25 @@
             <!--Lander-->
-            <div id="lander" class="d-flex align-items-center">
-                <div class="container">
+            <div id="lander" class="d-flex align-items-center" *ngFor = "let i of product_info">
+                <div class="container"  >
                   <div class="row">
                     <div class="col-xl-5 col-lg-6 d-flex justify-content-center video-box align-items-stretch">
                         <div class="column" style="margin-top: auto; width: 100%;">
-                      <img src="https://images-na.ssl-images-amazon.com/images/I/81xACHhRqXL._SL1500_.jpg" class="img-fluid" alt="landimg" id="landimg">
+                      <img src="{{i.img_1}}" class="img-fluid" alt="landimg" id="landimg">
                       <div class="row" id="bottom-img">
                       <div class = "img-select">
                         <div class = "img-item">
                           <a href = "#">
-                            <img  src = "https://images-na.ssl-images-amazon.com/images/I/81xACHhRqXL._SL1500_.jpg" id ="imgitem" alt = "watch1">
+                            <img  src = "{{i.img_1}}" id ="imgitem" alt = "watch1">
                           </a>
                         </div>
                         <div class = "img-item">
                           <a href = "#" >
-                            <img  src = "https://images-na.ssl-images-amazon.com/images/I/51%2BVDdedaYL._SL1500_.jpg" id ="imgitem" alt = "watch2">
+                            <img  src = "{{i.img_2}}" id ="imgitem" alt = "watch2">
                           </a>
                         </div>
                         <div class = "img-item">
                             <a href = "#">
-                              <img src = "https://images-na.ssl-images-amazon.com/images/I/71131XB8fLL._SL1500_.jpg" id ="imgitem" alt = "watch3">
+                              <img src = "{{i.img_3}}" id ="imgitem" alt = "watch3">
                             </a>
                           </div>
                       </div>
@@ -27,20 +27,14 @@
                        </div>
                     </div>
                     <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                        <h4>LG television</h4>
-                        <h1 id="item-title">LG 139 cm (55 inches) 4K Ultra HD Smart OLED TV 55CXPTA (Dark Steel Silver) (2020 Model)</h1>
+                        <h4 >{{i.cat}}</h4>
+                        <h1 id="item-title">{{i.name}}</h1>
                         <div class="row">
-                            <p id="dis-cost">₹  1,33,991.00  /-</p>
-                            <p id="org-cost">₹ 2,49,990.00</p>
+                            <p id="dis-cost">₹  {{i.dis_price}}  /-</p>
+                            <p id="org-cost">₹ {{i.org_price}}</p>
                         </div>                    
                         <h4 style="margin-top: 15px;">Product Information</h4>
-                        <h2  id="item-desc">Resolution: 4K Ultra HD (3840x2160) | AI 4K Upscaler | Processor: α9 Gen3 AI Processor 4K
-                            Connectivity: 4 HDMI ports to connect set top box, Blu Ray players, gaming console | 3 USB ports to connect hard drives and other USB devices
-                            Sound: 40 Watts Output | 2.2 Ch Speaker | Dolby Atmos | OLED Surround | AI Sound Pro| AI Acoustic Tuning
-                            Smart TV Features: AI ThinQ | Built-in Google Assistant & Alexa | Apple Airplay 2 & Homekit | Home Dashboard | Unlimited OTT App Support d OTT App Support | Filmmaker Mode | G-Sync Compatibility | FreeSync Premium| Sports Alert
-                            Display: Real 4K OLED | Self-LIT Pixels | Eye Comfort Display | Slim Design
-                            Warranty Information : 3 years comprehensive warranty provided by the manufacture from the date of purchase | Offer Valid till 30th April’21
-                        </h2>
+                        <h2  id="item-desc">{{i.desc}}</h2>
                         <div class="row" id="item-colqty">
                             <div class="column" id="item-colortxt">
                                 <h4>Color</h4>
@@ -58,7 +52,7 @@
                                 <p>Wishlist</p>
                             </div>
                             <div class="buynow-btn">
-                                <p>Buy Now</p>
+                                <p >Buy Now</p>
                             </div>
                         </div>
                       </div>
@@ -114,8 +108,8 @@
             <!--Promotions-->
             <section id="promotions">
                 <div class="row" style="width: 100%; margin: 0px;"> 
-                    <img class="img-fluid" src="https://i.pinimg.com/564x/52/65/13/526513a1b64add59d69262c1578b4549.jpg" alt="Promotions"  style=" height: 400px; width: 50%;" >
-                    <img class="img-fluid" src="https://i.pinimg.com/564x/fc/d4/04/fcd404d0a087cf7f96a39af6ed2b19cd.jpg" alt="Promotions"  style=" height: 400px; width: 50%; " >
+                    <img class="img-fluid" src="https://i.pinimg.com/564x/52/65/13/526513a1b64add59d69262c1578b4549.jpg" alt="Promotions"  id="promo-img" >
+                    <img class="img-fluid" src="https://i.pinimg.com/564x/fc/d4/04/fcd404d0a087cf7f96a39af6ed2b19cd.jpg" alt="Promotions"  id="promo-img" >
                 </div>
             </section>
         </section>

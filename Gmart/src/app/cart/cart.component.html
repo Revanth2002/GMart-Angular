@@ -1,0 +1,105 @@
+  
+    
+ <!--Title-->
+    <section class="section-pagetop">
+    <div class="container">
+        <h2 class="title-page">Shopping cart</h2>
+    </div> 
+    </section>
+
+    
+    <!--  Section Content -->
+    <section class="section-content ">
+    <div class="container">
+    
+    <div class="row">
+        <main class="col-md-9">
+    <div class="card">
+    
+    <table class="table table-borderless " >
+    <thead class="text-muted"> 
+    <tr class="medium">
+      <th scope="col">PRODUCT</th>
+      <th scope="col" width="120">QUANTITY</th>
+      <th scope="col" width="120">PRICE</th>
+      <th scope="col" class="text-right" width="200"> </th>
+    </tr>
+    </thead>
+    <tbody *ngFor = " let c of cart_prod">
+    <tr>
+        <td>
+            <figure class="itemside">
+                <div class="aside"><img src="{{c.p_img}}" class="img-cart"></div>
+                <figcaption class="info">
+                    <a routerLink="/shop" class="title text-dark">{{c.p_name}} </a>
+                </figcaption>
+            </figure>
+        </td>
+        <td> 
+
+           
+            <select class="form-control">
+                <option>1</option>
+                <option>2</option>  
+                <option>3</option> 
+            </select> 
+        </td>
+        <td> 
+            <div > 
+                <var class="price">₹ {{c.p_price}}</var> 
+            </div>
+        </td>
+        <td class="text-right">
+            <a  routerLink="/cart" class="btn btn-light"  data-toggle="tooltip" title="Remove Product"> Remove</a> 
+        <a  routerLink="/cart" class="btn btn-light ml-2" data-toggle="tooltip" title="Add to WishList"> <i class="fa fa-heart"></i></a> 
+        
+        </td>
+    </tr>
+
+    </tbody>
+    </table>
+    
+    <div class="card-body border-top">
+        <button (click) = "Payment(delivery_loc)" class="btn btn-success float-md-right"> Make Payments <i class="fa fa-chevron-right"></i> </button>
+        <a href="#" class="btn btn-light"> <i class="fa fa-chevron-left"></i> Continue shopping </a>
+    </div>	
+    </div> 
+    
+    
+        </main> 
+        <aside class="col-md-3">
+            <div class="card">
+                <div class="card-body">
+                        <dl class="dlist-align">
+                          <dt>Total:</dt>
+                          <dd class="text-right  h5"><strong>₹ 1,28,998.00</strong></dd>
+                        </dl>
+                        <hr>
+                        
+                </div>                  
+            </div> 
+            <br><br> 
+        </aside> 
+    </div>
+
+    <br><br>
+    
+    <section class="col-md-9">      
+        <div class="card">
+            <div style="margin-top: 20px;margin-bottom: 0px;" >
+                    <dl class="text-left ml-5">
+                      <dt><label>Enter Delivery Location  : <input type="text" [(ngModel)]='delivery_loc'/></label> </dt>
+                    </dl>     
+            </div>                  
+        </div> 
+        <br>
+        <div class="alert alert-success mt-3 ">
+            <p class=" ml-3 mt-2"><i class="icon text-success fa fa-truck"></i> &nbsp; Delivering to Address : {{delivery_loc}}</p>
+        </div>   
+    </section>
+    </div>
+    
+    
+    </section>
+    <br>
+    <hr style="width: 90%;">
