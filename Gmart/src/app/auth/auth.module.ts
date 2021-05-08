@@ -16,7 +16,8 @@ import { ResetComponent } from './component/reset/reset.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    
   ],
 
   exports : [

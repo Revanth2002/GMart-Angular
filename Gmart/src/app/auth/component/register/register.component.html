@@ -1,18 +1,18 @@
 
     <div class="login-form">    
-      <form >
+      <form #userPost="ngForm"(ngSubmit)="onRegister(userPost.value,username)">
           <div class="avatar"><i class="fa fa-user"></i></div>
           <h4 class="modal-title">Regsiter Your Account</h4>
           <div class="form-group">
-              <input type="text" class="form-control" placeholder="Username" required="required">
+              <input type="text" class="form-control" id="username" placeholder="Username" required="required">
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" placeholder="Email" required="required">
+            <input type="email" class="form-control" id="email" placeholder="Email" required>
         </div>
           <div class="form-group">
-              <input type="password" class="form-control" placeholder="Password" required="required">
+              <input type="password" class="form-control" id="pass" placeholder="Password" required="required">
           </div>
-          <input type="submit" class="btn btn-primary btn-block btn-lg" value="Login">              
+          <input type="submit" class="btn btn-primary btn-block btn-lg" value="Register">              
       </form>			
       <div class="text-center small">Already a member ? <a routerLink = "/login">Login</a></div>
   </div>
